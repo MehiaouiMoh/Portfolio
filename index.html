@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Portfolio de Mohamed Mehiaoui — Étudiant en BUT Informatique, passionné par le développement web et l'automatisation.">
+        <meta property="og:title" content="Portfolio — Mohamed Mehiaoui">
+        <meta property="og:description" content="Découvrez mes projets, mon parcours et mes compétences en développement web.">
+        <meta property="og:image" content="URL_DE_TON_IMAGE_DE_PARTAGE">
+        <meta name="author" content="Mohamed Mehiaoui">
+
+
+        <link href="css/index.css" rel="stylesheet">
+        <link href="css/indexResponsive.css" rel="stylesheet">
+        <link href="css/indexKeyframes.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo"><a href="index.html">Portfolio</a></div>
+                <div class="navigation">
+                    <a href="#parcours">Mon parcours</a>
+                    <a href="#projectsSection">Projets</a>
+                    <a href="#aboutMe">A propos de moi</a>
+                </div>
+                <div class="hamburgerIcone">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="Introduction">
+                <div class="contentText">
+                    <div class="bigText">Derrière <br>chaque ligne de code, il y a un apprentissage</div>
+                    <div class="greetins">Bienvenue sur mon portfolio !</div>
+                    <div class="presentation">Je suis Mehiaoui Mohamed, étudiant en BUT informatique.</div>
+                </div>
+                <div class="contentImg">
+                    <img src="assets/school.png" alt="school">
+                </div>
+            </section>
+            <section class="contentMain">
+                <div class="sliderContainer">
+                    <h2 class="titleSection">Découvrez mon parcours scolaire !</h2>
+                    <div class="slidersContainer">
+                        <div id="parcours">
+                            <div class="previous"><button type="button"><i class="fa-solid fa-arrow-left fa-2xl"></i></button></div>
+                            <div class="cardContainer">
+                                <div class="card active" id="card1">
+                                    <div class="firstPart">
+                                        <div class="txt">
+                                            <h1>Licence 1ere année SCIN (Science de l'ingénieur)</h1>
+                                            <p>2019-2022: UPMC Paris</p>
+                                            <p>Les étudiantes et étudiants de la faculté des Sciences et Ingénierie de la Sorbonne Université peuvent construire un parcours personnalisé grâce à une orientation progressive tout au long des trois années de licence. La première année de licence s'effectue donc dans le cadre d'un cycle d'intégration qui s'articule autour de portails.</p>
+                                        </div>
+                                        <div class="img" id="imgL1"><img src="assets/parcours/L1/l1ImgPrincipale.png" alt="umpc université"></div>
+                                    </div>
+                                    <div class="subjectContainer">
+                                        <div class="subject" id="subject1">
+                                            <div class="imgSubject"><img src="assets/parcours/L1/electroniquel1.png" alt="electronique"></div>
+                                            <div class="title">Electronique</div>
+                                        </div>
+                                        <div class="subject" id="subject2">
+                                            <div class="imgSubject"><img src="assets/parcours/L1/maths.jpg" alt="mathematiques"></div>
+                                            <div class="title">Mathématiques</div>
+                                        </div>
+                                        <div class="subject" id="subject3">
+                                            <div class="imgSubject"><img src="assets/parcours/L1/python_pr.jpg" alt="informatique"></div>
+                                            <div class="title">Informatique</div>
+                                        </div>
+                                        <div class="subject" id="subject4">
+                                            <div class="imgSubject"><img src="assets/parcours/L1/physique.jpg" alt="physique"></div>
+                                            <div class="title">Physique</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="card2">
+                                    <div class="firstPart">
+                                        <div class="txt">
+                                            <h1>Licence EEA (Électronique, énergie électrique, automatique)</h1>
+                                            <p>2022-2023: UPMC Paris</p>
+                                            <p>La licence Électronique, Énergie électrique, Automatique (EEA) de Sorbonne Université propose une formation généraliste couvrant tous les domaines de l'électronique. Mais elle se veut aussi comme une formation pluridisciplinaire car elle contient une part d'enseignement en informatique, mathématiques et physique</p>
+                                        </div>
+                                        <div class="img" id="imgL2"><img src="assets/parcours/L2/l2eea.png" alt="l2 eea"></div>
+                                    </div>
+                                    <div class="subjectContainer">
+                                        <div class="subject" id="subject1">
+                                            <div class="imgSubject"><img src="assets/parcours/L2/electroniquel2.png" alt="electronique"></div>
+                                            <div class="title">Electronique</div>
+                                        </div>
+                                        <div class="subject" id="subject2">
+                                            <div class="imgSubject"><img src="assets/parcours/L2/maths.jpg" alt="mathematique"></div>
+                                            <div class="title">Mathématiques</div>
+                                        </div>
+                                        <div class="subject" id="subject3">
+                                            <div class="imgSubject"><img src="assets/parcours/L2/c_programming.jpg" alt="informatique"></div>
+                                            <div class="title">Informatique</div>
+                                        </div>
+                                        <div class="subject" id="subject4">
+                                            <div class="imgSubject"><img src="assets/parcours/L2/physique.jpg" alt="physique"></div>
+                                            <div class="title">Physique</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="card3">
+                                    <div class="firstPart">
+                                        <div class="txt">
+                                            <h1>BUT Informatique</h1>
+                                            <p>2023-2024: Université de Lorraine</p>
+                                            <p>Le B.U.T. (Bachelor Universitaire de Technologie) INFO (Informatique) est le nouveau diplôme de référence des IUT. Il forme en 3 ans un professionnel répondant aux besoins des entreprises en matière de maîtrise des outils modernes de l'informatique et d'ouverture aux technologies de pointe.</p>
+                                        </div>
+                                        <div class="img" id="imgBUT"><img src="assets/parcours/but.png" alt="Iut Saint dié des Vosges"></div>
+                                    </div>
+                                    <div class="subjectContainer">
+                                        <div class="subject" id="subject1">
+                                            <div class="imgSubject"><img src="assets/parcours/BUT1/database.png" alt=""></div>
+                                            <div class="title">Base de données</div>
+                                        </div>
+                                        <div class="subject" id="subject2">
+                                            <div class="imgSubject"><img src="assets/parcours/BUT1/maths.jpg" alt=""></div>
+                                            <div class="title">Mathématiques</div>
+                                        </div>
+                                        <div class="subject" id="subject3">
+                                            <div class="imgSubject"><img src="assets/parcours/BUT1/frontend.png" alt=""></div>
+                                            <div class="title">Developpement web (html/css)</div>
+                                        </div>
+                                        <div class="subject" id="subject4">
+                                            <div class="imgSubject"><img src="assets/parcours/BUT1/algorithmique.png" alt=""></div>
+                                            <div class="title">Introduction à l'algorithmique</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" id="card4">
+                                    <div class="firstPart">
+                                        <div class="txt">
+                                            <h1>BUT2 Informatique</h1>
+                                            <p>2024-2025: Université de Lorraine</p>
+                                            <p>Le B.U.T. (Bachelor Universitaire de Technologie) INFO (Informatique) est le nouveau diplôme de référence des IUT. Il forme en 3 ans un professionnel répondant aux besoins des entreprises en matière de maîtrise des outils modernes de l'informatique et d'ouverture aux technologies de pointe.</p>
+                                        </div>
+                                        <div class="img" id="imgBUT"><img src="assets/parcours/but.png" alt="Iut Saint dié des Vosges"></div>
+                                    </div>
+                                    <div class="subjectContainer">
+                                        <div class="subject" id="subject1">
+                                            <div class="imgSubject"></div>
+                                            <div class="title">Base de données</div>
+                                        </div>
+                                        <div class="subject" id="subject2">
+                                            <div class="imgSubject"></div>
+                                            <div class="title">Mathématiques</div>
+                                        </div>
+                                        <div class="subject" id="subject3">
+                                            <div class="imgSubject"></div>
+                                            <div class="title">Developpement web (html/css)</div>
+                                        </div>
+                                        <div class="subject" id="subject4">
+                                            <div class="imgSubject"></div>
+                                            <div class="title">Introduction à l'algorithmique</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next"><button type="button" class="btn-next"><i class="fa-solid fa-arrow-right fa-2xl"></i></button></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="projectsSection">
+                    <h2 class="titleSection">Apprendre par la pratique</h2>
+                    <div class="projetContainer">
+                        <div class="cardProjet" id="card1">
+                            <h2>Vosges Tennis</h2>
+                            <p>Un site fictif fullstack pour un club de tennis, avec gestion des membres et des tournois, boutique en ligne(sans prélèvement)</p>
+                            <p class="tech">🧰 Tech stack : PHP, Docker, MySQL, JavaScript, HTML/CSS</p>
+                            <p class="objectifs">🎯 Objectif : apprendre à structurer une application fullstack complète.</p>
+                            <div class="img" id="vosgesTennis"></div>
+                        </div>
+                        <div class="cardProjet" id="card2">
+                            <h2>FrigoZen</h2>
+                            <p>Une app Sass pour gérer les stocks de nourriture dans un frigo. En cours de développement.</p>
+                            <p class="tech">🧰 Tech stack : PHP (API REST), PostgreSQL, JavaScript, HTML/CSS</p>
+                            <p class="objectifs">🎯 Objectif : apprendre à développer une API REST et connecter une interface front dynamique.</p>
+                            <div class="img" id="frigozen"></div>
+                        </div>
+                    </div>
+                    <a href="https://porfolio-competences.vercel.app/" id="toPortfolio2">
+                        <p>Vers le portfolio des compétences pour plus de projets et leur démos</p> 
+                        <p class="up_right">&#8599;</p>
+                    </a>
+                </div>
+                <div id="aboutMe">
+                    <h2 class="titleSection">Un peu plus d'informations</h2>
+                    <div class="containerInfo">
+                        <div class="infos">
+                            <div class="etudes">
+                                <div class="head">
+                                    <p class="etudesValidées">Niveau d'études validées : Bac+2</p>
+                                    <p class="parcours">BUT Informatique</p>
+                                </div>
+                                <div class="middle">
+                                    <h2 class="level">Bac+ 3 en cours</h2>
+                                </div>
+                                <div class="footer">
+                                    <p>Parcours RA: Réalisation d'applications web et mobiles</p>
+                                </div>
+                            </div>
+                            <div class="competences">
+                                <div class="skills" id="html">
+                                    <div class="langage">HTML</div>
+                                    <div class="outer">
+                                        <div class="inner">
+                                            <div id="number">80%</div>
+                                        </div>
+                                    </div>
+                                    <div class="domaine">Web Front</div>
+                                </div>
+                                <div class="skills" id="css">
+                                    <div class="langage">CSS</div>
+                                    <div class="outer">
+                                        <div class="inner">
+                                            <div id="number">60%</div>
+                                        </div>
+                                    </div>
+                                    <div class="domaine">Web Front</div>
+                                </div>
+                                <div class="skills" id="js">
+                                    <div class="langage">JS</div>
+                                    <div class="outer">
+                                        <div class="inner">
+                                            <div id="number">50%</div>
+                                        </div>
+                                    </div>
+                                    <div class="domaine">Web Front/Back</div>
+                                </div>
+                                <div class="skills" id="sql">
+                                    <div class="langage">SQL</div>
+                                    <div class="outer">
+                                        <div class="inner">
+                                            <div id="number">50%</div>
+                                        </div>
+                                    </div>
+                                    <div class="domaine">Database</div>
+                                </div>
+                                <div class="skills" id="php">
+                                    <div class="langage">PHP</div>
+                                    <div class="outer">
+                                        <div class="inner">
+                                            <div id="number">40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="domaine">Web Back</div>
+                                </div>
+                                <div class="skills" id="n8nMake">
+                                    <div class="langage">n8n & make</div>
+                                    <div class="outer">
+                                        <div class="inner">
+                                            <div id="number">20%</div>
+                                        </div>
+                                    </div>
+                                    <div class="domaine">Automatisation</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carriere">
+                            <div class="metier">
+                                <h3>Ce que j'aimerai faire plus tard</h3>
+                                <p>Développeur web front ou fullstack</p>
+                                <p class="accroche">Créer des applications modernes, intuitives et dynamiques, qui allient design et performance</p>
+                                <div class="img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--<footer>
+            <div class="bar"></div>
+            <div class="infos">
+                <div class="accroche">Envie d'échanger ? N'hésitez pas à me contacter par email 👇</div>
+                <div class="emailSocialMedia">
+                    <div class="emailCopy">
+                        <input type="text" value="mehiaoui_m@outlook.fr" hidden id="myInput">
+                        <button onclick="copyText()">mohamed.mehiaoui93600@gmail.com</button>
+                    </div>
+                    <div class="SocialMedia">
+                        <a href="https://www.linkedin.com/in/mohamed-mehiaoui-614b63187/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                        <a href="https://github.com/MehiaouiMoh/" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="nameDev">Créé à Paris❤️</p>
+                <p class="copyright">© 2025 Mohamed Mehiaoui — Tous droits réservés.</p>
+            </div>
+        </footer>-->
+    </body>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="js/changeNavSlider.js"></script>
+    <script src="js/progressBar.js"></script>
+    <script src="js/copyClipboard.js"></script>
+    <script src="js/Gsap/changeColorTxt.js"></script>
+
+</html>

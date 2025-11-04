@@ -1,0 +1,33 @@
+/*Keyframes*/
+@keyframes textTyping {
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+@keyframes revealText {
+  from{
+    opacity: 0%
+  }
+  to{
+    opacity: 100%
+  }
+}
+
+@keyframes bounceUp {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-50px);
+  }
+  80% {
+    transform: translateY(-35px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}

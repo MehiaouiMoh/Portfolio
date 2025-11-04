@@ -1,0 +1,164 @@
+/* ----------------------------- */
+/* 🔽 RESPONSIVE DESIGN 🔽 */
+/* ----------------------------- */
+
+/* Tablettes (jusqu’à 1024px) */
+@media screen and (max-width: 1024px) {
+    body{
+        main {
+            .Introduction{
+                flex-direction: column;
+                justify-content: center;
+                gap: 0px;
+                text-align: center;
+
+
+                .contentText{
+                    width: 60%;
+                    align-items: center;
+                    div {
+                        margin-left: 0; /* centrage du texte */
+                    }
+                    .bigText {
+                        font-size: 50px;
+                    }
+                    .greetins,.presentation{
+                        font-size: 24px;
+                    }
+                }
+            }
+            .contentMain{
+
+                .titleSection{
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                    margin-left: 30px;
+                    font-weight: lighter;
+                    width: 100%;
+                    text-align: center;
+                    opacity: 0%;
+                }
+                .sliderContainer{
+                
+                    .slidersContainer{
+                        #parcours {
+                            .cardContainer {
+                                .card {
+                                .firstPart {
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 20px;
+                                    text-align: center;
+
+                                    .txt {
+                                    width: 80%;
+                                    }
+
+                                    .img {
+                                    width: 80%;
+                                    height: 200px;
+                                    }
+                                }
+
+                                .subjectContainer {
+                                    display: grid;
+                                    grid-template-columns: repeat(2, 1fr);
+                                    justify-items: center;
+                                    align-items: center;
+                                    gap: 20px;
+
+                                    .imgSubject {
+                                    width: 200px;
+                                    height: 200px;
+                                    }
+                                }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Mobiles (jusqu’à 600px) */
+@media screen and (max-width: 600px) {
+    body{
+        main {
+            .Introduction{
+                flex-direction: column;
+                gap: 30px;
+                .contentText{
+                    width: fit-content;
+
+                    .bigText {
+                        font-size: 50px;
+                    }
+                    .greetins,.presentation{
+                        font-size: 18px;
+                    }
+                }
+                .contentImg{
+                    width: 80%;
+                }
+                .contentImg img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .contentMain{
+
+                .titleSection{
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                    margin-left: 30px;
+                    font-weight: lighter;
+                    width: 100%;
+                    text-align: center;
+                    opacity: 0%;
+                }
+                .sliderContainer{
+                    .slidersContainer{
+                        #parcours {
+                            .cardContainer {
+                                .card {
+                                    .firstPart {
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 20px;
+                                        text-align: center;
+
+                                        .txt {
+                                        width: 80%;
+                                        }
+
+                                        .img {
+                                        width: 80%;
+                                        height: 200px;
+                                        }
+                                    }
+
+                                    .subjectContainer {
+                                        display: grid;
+                                        grid-template-columns: repeat(2, 1fr);
+                                        justify-items: center;
+                                        align-items: center;
+                                        gap: 20px;
+
+                                        .imgSubject {
+                                        width: 200px;
+                                        height: 200px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
