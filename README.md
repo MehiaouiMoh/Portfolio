@@ -1,7 +1,6 @@
 # 👋 Portfolio de Mehiaoui Mohamed
-
 Bienvenue sur mon portfolio ! Ici, vous pouvez découvrir mes projets, mes compétences et mon parcours en développement web.
-Visitez le sur : [https://portfolio-mehiaouis-projects.vercel.app/](#)
+Visitez le sur : [https://portfolio-mehiaouis-projects.vercel.app/](#).
 > ⚠️ Note : Le portfolio est actuellement optimisé pour **ordinateur**. L’affichage sur mobile est encore en cours de développement.
 
 ---
