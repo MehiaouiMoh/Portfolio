@@ -1,6 +1,7 @@
 # 👋 Portfolio de Mehiaoui Mohamed
-
 Bienvenue sur mon portfolio ! Ici, vous pouvez découvrir mes projets, mes compétences et mon parcours en développement web.
+Visitez le sur : [https://portfolio-mehiaouis-projects.vercel.app/](#).
+> ⚠️ Note : Le portfolio est actuellement optimisé pour **ordinateur**. L’affichage sur mobile est encore en cours de développement.
 
 ---
 
@@ -11,8 +12,6 @@ Je suis passionné par la création d'applications modernes, fonctionnelles et e
 - 🌍 Localisation : France  
 - 🎯 Objectif : Développer des applications web performantes et intuitives  
 - ⚡ Intérêts : Automatisation, API, Symfony, PHP, Frontend moderne
-
-> ⚠️ Note : Le portfolio est actuellement optimisé pour **ordinateur**. L’affichage sur mobile est encore en cours de développement.
 
 ---
 
