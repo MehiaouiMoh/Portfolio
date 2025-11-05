@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.create({
-    trigger: ".titleSection",
+    trigger: "#parcoursPart",
     toggleActions:"play none none none",
     start: "top center",
     markers:false,
