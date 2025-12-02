@@ -6,7 +6,7 @@ const slidersContainer = document.querySelector('.slidersContainer');
 const cardContainer = slidersContainer.querySelectorAll('.card');
 console.log(cardContainer);
 
-const btnNext = slidersContainer.querySelector('.btn-next');
+const btnNext = slidersContainer.querySelector('.next');
 const btnPrev = slidersContainer.querySelector('.previous');
 
 
@@ -42,10 +42,7 @@ function changeNavSlider(){
     //ajout d'un evenement au clic sur le bouton next
     btnNext.addEventListener('click', ()=>{
         indexSlider = indexSlider+1;
-        //si l'index est superieur au nombre de cartes, on le remet a 1
-        if(indexSlider > longeurCardContainer){
-            indexSlider = 0;
-        }
+        
         //on retire la classe active a toutes les cartes
         cardContainer.forEach((card)=>{
             card.classList.remove('active');
@@ -60,17 +57,14 @@ function changeNavSlider(){
     //ajout d'un evenement au clic sur le bouton previous
     btnPrev.addEventListener('click', ()=>{
         indexSlider--;
-        //si l'index est inferieur a 1, on le remet au nombre de cartes
-        if(indexSlider < 1){
-            indexSlider = 1;
-            updateButtonsVisibility();
-        }
         //on retire la classe active a toutes les cartes
         cardContainer.forEach((card)=>{
             card.classList.remove('active');
         });
         //on ajoute la classe active a la carte correspondante a l'index
-        cardContainer[indexSlider-1].classList.add('active');
+        cardContainer[indexSlider].classList.add('active');
+
+        updateButtonsVisibility();
 
     });
 }

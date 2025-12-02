@@ -74,7 +74,6 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
             width: 100%;
             height: fit-content;
             padding: 20px;
@@ -87,12 +86,14 @@ body{
                 justify-content: center;
                 gap: 30px;
 
-                div{margin-left: 20px;}
+                div{
+                    margin-left: 50px;
+                }
 
                 .bigText{
                     width: 100%;
                     height: fit-content;
-                    font-size: 70px;
+                    font-size: 60px;
                 }
                 .greetins, .presentation{
                     font-size: 30px;
@@ -102,7 +103,7 @@ body{
                 }
             }
             .contentImg{
-                width: 45%;
+                width: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -158,10 +159,28 @@ body{
                         justify-content: center;
                         align-items: center;
                         gap: 20px;
+                        position: relative;
 
                         button{
                             border: none;
                             background-color: transparent;
+                        }
+                        .previous, .next{
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                            background-color: white;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                        }
+                        .previous{
+                            left: 1%;
+                            background-color: white;
+                        }
+                        .next{
+                            right: 1%;
                         }
 
                         .cardContainer{
