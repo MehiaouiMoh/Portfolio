@@ -86,6 +86,22 @@
 /* Mobiles (jusqu’à 600px) */
 @media screen and (max-width: 600px) {
     body{
+        header{
+            nav{
+                .navigation{
+                    display: none;
+                }
+                .hamburgerIcone{
+                    display: block;
+                    .hamburger{
+                        display: block;
+                    }
+                    .cross{
+                        display: none;
+                    }
+                }
+            }
+        }
         main {
             .Introduction{
                 flex-direction: column;
