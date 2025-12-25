@@ -190,10 +190,10 @@ body{
             width: 90%;
             height: 200px;
             padding: 40px 20px;
-            position: relative;
-            left: auto;
-            top: auto;
-            transform: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
 
             h1{
                 font-size: 5em;
