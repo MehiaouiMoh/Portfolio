@@ -186,6 +186,8 @@ body{
     body{
         header{
            background-position: top center;
+           border-radius-bottom-left: 0px;
+           border-radius-bottom-right: 0px;
         .blur{
             width: 90%;
             height: 200px;
