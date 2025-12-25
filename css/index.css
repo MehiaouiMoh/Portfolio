@@ -9,7 +9,7 @@ body{
     background-color: #ffffff;
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -17,612 +17,76 @@ body{
     
 
     header{
-        background-color: #ffffff;
-        padding: 10px 0;
-        text-align: center;
         width: 100%;
+        min-height: 100vh;
+        background-image: url('../assets/portfolioHeader1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom-left-radius: 30%;
+        border-bottom-right-radius: 30%;
+        position: relative;
+
         nav{
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            width: 100%;
+            padding: 20px 40px;
 
             .logo{
-                font-size: 25px;
-                font-weight: bold;
-
                 a{
                     text-decoration: none;
+                    font-size: 2.0em;
+                    font-weight: bold;
                     color: black;
-                    padding: 10px;
                 }
             }
-            .navigation{
-                display: flex;
-                justify-content: space-around;
-                width: 50%;
-                a{
-                    text-decoration: none;
-                    color: black;
-                    padding: 10px;
-                    transition: color 0.3s;
-                    font-size: 20px;
-                    &:hover{
-                        color: grey;
+            .menu{
+                ul{
+                    list-style: none;
+                    display: flex;
+                    gap: 30px;
+
+                    li{
+                        a{
+                            text-decoration: none;
+                            font-size: 1.1em;
+                            color: black;
+                            transition: color 0.3s;
+
+                            &:hover{
+                                color: #0073e6; /* couleur au survol */
+                            }
+                        }
                     }
                 }
             }
-            .hamburgerIcone{
-                font-size: 24px;
-                cursor: pointer;
-                display: none;
+        }
+        .blur{
+            width: 600px;
+            height: 500px;
+            backdrop-filter: blur(5px);
+            position: absolute;
+            left: 25%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 2px white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-                .hamburger, .cross{
-                    background: none;
-                    border: none;
-                }
+
+            h1{
+                font-size: 7em;
+                color: black;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
     main{
-        width: 100%;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        padding-top: 100px; /* espace sous le header */
-        flex: 1;
-
-        .Introduction{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: fit-content;
-            padding: 20px;
-
-            .contentText{
-                width: fit-content;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 30px;
-
-                div{
-                    margin-left: 50px;
-                }
-
-                .bigText{
-                    width: 100%;
-                    height: fit-content;
-                    font-size: 60px;
-                }
-                .greetins, .presentation{
-                    font-size: 30px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    animation: textTyping 2s steps(20) infinite alternate-reverse;
-                }
-            }
-            .contentImg{
-                width: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 10px;
-
-                img{
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                    object-fit: contain;
-                }
-            }
-        }
-        .contentMain{
-            min-height: 100vh;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            gap: 50px;
-
-            .titleSection{
-                font-size: 40px;
-                margin-bottom: 20px;
-                margin-left: 30px;
-                font-weight: lighter;
-                width: 100%;
-                text-align: center;
-            }
-            .sliderContainer{
-                width: 100%;
-                height: fit-content;
-                gap: 30px;
-                padding: 80px 0px 20px 0px;
-                margin-bottom: 50px;
-
-                #parcoursPart{opacity: 0%;}
-                #parcoursPart.activeOnText{
-                    animation: revealText 1s ease-in-out forwards;
-                }
-                .slidersContainer{
-                    max-width: 100%;
-                    height: 100%;
-                    padding: 20px;
-                    gap: 20px;
-                    display: flex;
-
-                    #parcours{
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 20px;
-                        position: relative;
-
-                        button{
-                            border: none;
-                            background-color: transparent;
-                        }
-                        .previous, .next{
-                            width: 80px;
-                            height: 80px;
-                            border-radius: 50%;
-                            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                            background-color: white;
-                            justify-content: center;
-                            align-items: center;
-                            position: absolute;
-                        }
-                        .previous{
-                            left: 1%;
-                            background-color: white;
-                        }
-                        .next{
-                            right: 1%;
-                        }
-
-                        .cardContainer{
-                            display: flex;
-                            max-width: 90%;
-                            gap: 10px;
-                            box-shadow: 0 0 20px rgb(223, 223, 223);
-                            overflow-x: hidden;
-                            transition: transform 0.5s ease-in-out;
-                            will-change: transform;
-
-                            .card{
-                                min-width: 100%;
-                                height: fit-content;
-                                display: none;
-                                gap: 80px;
-                                padding: 10px;
-
-                                .firstPart{
-                                    width: 100%;
-                                    height: fit-content;
-                                    display: flex;
-                                    justify-content: space-around;
-                                    align-items: center;
-                                    gap: 10px;
-
-                                    .txt{
-                                        width: 50%;
-                                        height: fit-content;
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
-                                        gap: 20px;
-                                        h1{
-                                            font-size: 40px;
-                                        }
-                                    }
-                                    .img{
-                                        width: 400px;
-                                        height: 250px;
-                                        background-color: grey;
-                                        border-radius: 10px;
-
-                                        img{
-                                            width: 100%;
-                                            height: 100%;
-                                            display: block;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                }
-                                .subjectContainer{
-                                    width: 100%;
-                                    height: fit-content;
-                                    display: flex;
-                                    justify-content:space-around;
-                                    align-items: center;
-                                    gap:10px;
-
-                                    .subject{
-                                        width: fit-content;
-                                        height: fit-content;
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
-                                        align-items: center;
-                                        gap: 10px;
-
-                                        .imgSubject{
-                                            width: 250px;
-                                            height: 250px;
-                                            background-color: grey;
-                                            border-radius: 30px;
-
-                                            img{
-                                                width: 100%;
-                                                height: 100%;
-                                                display: block;
-                                                object-fit: cover;
-                                                border-radius: 30px;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            .card.active{
-                                display: flex;
-                                flex-direction: column;
-                                justify-self: space-around;
-                                align-items: center;
-                            }
-                        }
-                    }
-                }
-            }
-            #projectsSection{
-                width: 100%;
-                height: fit-content;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-
-                .titleSection{
-                    margin-bottom: 50px;
-                }
-                
-                .projetContainer{
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    width: 90%;
-                    height: fit-content;
-                    gap: 20px;
-                    .cardProjet{
-                        width: 90%;
-                        background-color: #ffff;
-                        border-radius: 10px;
-                        padding: 20px;
-                        box-shadow: 0 0 20px 4px #D9D9D9;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 20px;
-                        
-
-                        h2,p{
-                            width: 100%;
-                            display: flex;
-                            justify-content: flex-start;
-                            width: 100%;
-                        }
-
-                        h2{
-                            font-size: 25px;
-                            text-transform: uppercase;
-                        }
-                        p{
-                            font-size: 18px;
-                            flex-wrap: wrap;
-                            font-weight:normal;
-                        }
-                        .img{
-                            width: 100%;
-                            height: 400px;
-                            background-color: grey;
-                            border-radius: 10px;
-                        }
-
-                        #vosgesTennis{
-                            background-image: url('../assets/Projets/club_tennis.png');
-                            background-size: cover;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                        }
-                        #frigozen{
-                            background-image: url('../assets/Projets/frigozen.png');
-                            background-size: cover;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                        }
-                        .tech, .objectifs{
-                            font-size: 15px;
-                        }
-                    }
-                }
-                #toPortfolio2{
-                    border: 1px solid black;
-                    border-radius: 20px;
-                    width: 25%;
-                    height: fit-content;
-                    text-wrap: wrap;
-                    text-decoration: none;
-                    color: black;
-                    font-size: 20px;
-                    padding: 20px;
-                    transition: color 0.3s;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 10px;
-                    margin-top: 50px;
-
-                    .up_right{
-                        font-size: 25px;
-                        margin-left: 10px;
-                    }
-
-                    &:hover{
-                        color: grey;
-                    }
-                }
-            }
-            #aboutMe{
-                height: fit-content;
-                padding: 10px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                .titleSection{
-                    margin-bottom: 50px;
-                }
-                .containerInfo{
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 2rem;
-                    align-items: start;
-
-                    .infos{
-                        display: grid;
-                        gap: 1rem;
-
-                        .etudes{
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                            align-items: center;
-                            gap: 10px;
-                            border: solid 1px black;
-                            border-radius: 20px;
-                            width: 520px;
-                            height: 250px;
-                            padding: 10px 0 10px 0;
-
-                            .head{
-                                display: flex;
-                                justify-content: space-around;
-                                align-items: center;
-                                gap: 10px;
-                                width: 100%;
-
-                                .parcours{
-                                    border-radius: 50px;
-                                    padding: 5px 20px 5px 20px;
-                                    color: white;
-                                    background-color: black;
-                                    text-align: center;
-                                }
-                            }
-                            .middle{
-                                .level{
-                                    font-weight: normal;
-                                    font-size: 40px;
-                                }
-                            }
-                            .footer{
-                                p{
-                                    font-weight: lighter;
-                                }
-                            }
-                        }
-                        .competences{
-                            display: grid;
-                            grid-template-columns: 1fr 1fr;
-                            row-gap: 1rem;
-                            column-gap: 1rem;
-                            align-items: center;
-
-                            .skills{
-                                width: 250px;
-                                height: 250px;
-                                border-radius: 10px;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-around;
-
-                                .outer{
-                                    width: 160px;
-                                    height: 160px;
-                                    margin-left: 40px;
-                                    border-radius: 50%;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    
-                                    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-                                                -6px -6px 10px -1px rgba(255,255,255,0.7);
-
-                                    .inner{
-                                        width: 120px;
-                                        height: 120px;
-                                        border-radius: 50%;
-                                        box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
-                                                    inset -4px -4px 6px -1px rgba(255,255,255,0.7),
-                                                    -0.5px -0.5px 0px rgba(255,255,255,1),
-                                                    0.5px 0.5px 0px rgba(0,0,0,0.15),
-                                                    0px 12px 10px -10px rgba(0,0,0,0.05);
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        
-
-                                        #number{
-                                            font-weight: bold;
-                                        }
-                                    }
-                                }
-
-                                .langage,.domaine{
-                                    font-weight: bold;
-                                }
-                                .langage{
-                                    margin-left: 30px;
-                                }
-                                .domaine{
-                                   display: flex;
-                                   justify-content: end;
-                                   width: 92%;
-                                }
-                            }
-                            #html{
-                                background-color: #EEA47F;
-                                .outer{
-                                    background: conic-gradient(
-                                        #00639C 0% 80%,   /* bleu pour 80% */
-                                        #ffff 80% 100% /* gris pour le reste */
-                                    );
-                                }
-                                .inner{
-                                    background-color: #EEA47F;
-                                }
-                                .langage,.domaine{
-                                    color: #00639C;
-                                }
-                            }
-                            #css{
-                                background-color: #00639C;
-                                .outer{
-                                    background: conic-gradient(
-                                        #EEA47F 0% 60%,   /* bleu pour 80% */
-                                        #ffff 60% 100% /* gris pour le reste */
-                                    );
-                                }
-                                .inner{
-                                    background-color: #00639C;
-                                }
-                                .langage,.domaine{
-                                    color: #EEA47F;
-                                }
-                            }
-                            #js{
-                                background-color: #FEE715;
-                                .outer{
-                                    background: conic-gradient(
-                                        #664E27 0% 50%,   /* bleu pour 80% */
-                                        #ffff 50% 100% /* gris pour le reste */
-                                    );
-                                }
-                                .inner{
-                                    background-color: #FEE715;
-                                }
-                                .langage,.domaine{
-                                    color: #101820;
-                                }
-                            }
-                            #sql{
-                                background-color: #D6ED17;
-                                .outer{
-                                    background: conic-gradient(
-                                        #0000 0% 50%,   /* bleu pour 80% */
-                                        #ffff 50% 100% /* gris pour le reste */
-                                    );
-                                }
-                                .inner{
-                                    background-color: #D6ED17;
-                                }
-                                .langage,.domaine{
-                                    color: #000E18;
-                                }
-                            }
-                            #php{
-                                background-color: #ED26CF;
-                                .outer{
-                                    background: conic-gradient(
-                                        #EEA47F 0% 40%,   /* bleu pour 80% */
-                                        #ffff 40% 100% /* gris pour le reste */
-                                    );
-                                }
-                                .inner{
-                                    background-color: #ED26CF;
-                                }
-                                .langage,.domaine{
-                                    color: #ffff;
-                                }
-                            }
-                            #n8nMake{
-                                background: #9000FF;
-                                background: linear-gradient(134deg, rgba(144, 0, 255, 1) 0%, rgba(237, 38, 207, 1) 68%);
-                                .outer{
-                                    background: conic-gradient(
-                                        #F07509 0% 20%,   /* bleu pour 80% */
-                                        #ffff 40% 100% /* gris pour le reste */
-                                    );
-                                }
-                                .inner{
-                                    background: #9000FF;
-                                    background: linear-gradient(134deg, rgba(144, 0, 255, 1) 0%, rgba(237, 38, 207, 1) 68%);
-                                }
-                                .langage,.domaine{
-                                    color: #ffff;
-                                }
-                            }
-                        }
-                    }
-                    .carriere{
-                        .metier{
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: start;
-                            align-items:start;
-                            gap: 10px;
-                            width: 500px;
-                            border-radius: 15px;
-                            padding: 20px 20px 20px 20px;
-                            box-shadow: 0 0 20px 4px #D9D9D9;
-
-                            .accroche{
-                                font-style: italic;
-                                color: #606060;
-                            }
-                            .img{
-                                width: 100%;
-                                height: 200px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                background-image: url('../assets/fullstack.png');
-                                background-size: cover;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        
     }
     /* Footer */
     footer {
@@ -690,6 +154,58 @@ body{
 
         p{
             color: #606060;
+        }
+    }
+}
+
+
+/* ----------------------------- */
+/* 🔽 RESPONSIVE DESIGN 🔽 */
+/* ----------------------------- */
+
+/* Tablettes (jusqu’à 1024px) */
+@media screen and (max-width: 1024px) {
+    body{
+        header{
+            .blur{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+            }
+        }
+        main {
+            
+        }
+    }
+}
+
+/* Mobiles (jusqu’à 600px) */
+@media screen and (max-width: 600px) {
+    body{
+        header{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center; 
+           background-position: top center;
+        .blur{
+            width: 90%;
+            height: 200px;
+            padding: 40px 20px;
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: none;
+
+            h1{
+                font-size: 5em;
+            }
+        }
+    }
+        main{
+            
         }
     }
 }
