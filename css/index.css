@@ -280,7 +280,21 @@ body{
         }
     }
         main{
-            
+            .aboutMe{
+                .infos{
+                    width: 90%;
+                    padding: 20px;
+                    text-align: center;
+                }
+                .imgsIntroProjets{
+                    margin-top: 40px;
+                    .vosgesTennis, .frigoZen{
+                        position: static;
+                        width: 90%;
+                        height: auto;
+                    }
+                }
+            }
         }
     }
 }
