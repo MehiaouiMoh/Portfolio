@@ -136,7 +136,6 @@ body{
                 position: relative;
                 width: fit-content;
                 height: fit-content;
-                background-color: red;
                 div{
                     background-size: cover;
                     background-position: center;
@@ -287,11 +286,13 @@ body{
                     text-align: center;
                 }
                 .imgsIntroProjets{
-                    margin-top: 40px;
                     .vosgesTennis, .frigoZen{
-                        position: static;
-                        width: 90%;
-                        height: auto;
+                        width: 350px;
+                        height: 200px;
+                    }
+                    .frigoZen{
+                        top: 150px;
+                        right: 10px;
                     }
                 }
             }
