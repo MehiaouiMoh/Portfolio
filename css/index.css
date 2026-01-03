@@ -448,17 +448,17 @@ body{
                     width: fit-content;
                     justify-content: start;
                     align-items: flex-start;
-                    h2{
+                    /*h2{
                        margin-left: 80px; 
-                    }
+                    }*/
                     p{
                         text-align: center;
                         margin-top: 10px;
                     }
-                    .accroche{
+                    /*.accroche{
                         margin-left: 30px;
                         width: 450px;
-                    }
+                    }*/
                     .cards {
                         flex-wrap: nowrap;
                         overflow-x: hidden;
