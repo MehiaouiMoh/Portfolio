@@ -401,7 +401,6 @@ body{
 /* Mobiles (jusqu’à 600px) */
 @media screen and (max-width: 600px) {
     body{
-        width: 100svw;
         overflow-x: hidden;
         header{
             background-position: top center;
