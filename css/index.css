@@ -402,10 +402,9 @@ body{
 @media screen and (max-width: 600px) {
     body{
         header{
-            width: 100svh;
-           background-position: top center;
-           border-bottom-left-radius: 0px;
-           border-bottom-right-radius: 0px;
+            background-position: top center;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
         .blur{
             width: 90%;
             height: 200px;
