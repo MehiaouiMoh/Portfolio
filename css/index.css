@@ -464,7 +464,7 @@ body{
                         overflow-x: hidden;
                         user-select: none;
                         padding: 0 5vw;
-                        width: 100vw;
+                        width: 100%;
                         .card {
                             position: relative;
                             transition: all 1s ease; 
@@ -472,6 +472,7 @@ body{
                         .card:active{
                             transform: scale(0.9);
                             margin:0 0;
+                            width: 100%;
                         }
                     }
                     .cards:active{
