@@ -459,6 +459,7 @@ body{
                         cursor: grab;
 
                         .card {
+                            flex:0 0 85%;
                             scroll-snap-align: start;
                         }
                     }
