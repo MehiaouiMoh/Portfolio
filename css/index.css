@@ -461,10 +461,10 @@ body{
                     }
                     .cards {
                         flex-wrap: nowrap;
-                        overflow: hidden;
+                        overflow-x: hidden;
                         user-select: none;
                         padding: 0 5vw;
-                        width: 100svw;
+                        width: 100vw;
                         .card {
                             position: relative;
                             transition: all 1s ease; 
