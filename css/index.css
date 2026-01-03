@@ -418,6 +418,11 @@ body{
                 font-size: 5em;
             }
         }
+        nav{
+            .menu{
+                display: none;
+            }
+        }
     }
         main{
             .aboutMe{
@@ -444,30 +449,21 @@ body{
                         margin-top: 10px;
                     }
                     .cards {
-                        display: flex;
                         flex-wrap: nowrap;
-                        gap: 20px;
-
-                        overflow-x: auto;
-                        overflow-y: hidden;
-                        scroll-padding-left: 0;
-
-                        scroll-snap-type: x mandatory;
-                        -webkit-overflow-scrolling: touch;
-                        scrollbar-width: none;
-
-                        cursor: grab;
-
+                        overflow: hidden;
+                        user-select: none;
+                        padding: 0 5vw;
+                        width: fit-content;
                         .card {
-                            flex:0 0 85%;
-                            scroll-snap-align: start;
+                            position: relative;
+                            transition: all 1s ease;  
+                        }
+                        .card:active{
+                            transform: scale(0.9);
+                            margin:0 0;
                         }
                     }
-                    .cards::-webkit-scrollbar {
-                        display: none;
-                    }
-
-                    .cards:active {
+                    .cards:active{
                         cursor: grabbing;
                     }
                 }
