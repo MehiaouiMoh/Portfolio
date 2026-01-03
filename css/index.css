@@ -448,9 +448,10 @@ body{
                     width: fit-content;
                     justify-content: start;
                     align-items: flex-start;
-                    /*h2{
-                       margin-left: 80px; 
-                    }*/
+                    h2{
+                       width: 100%;
+                       text-align: center; 
+                    }
                     p{
                         text-align: center;
                         margin-top: 10px;
