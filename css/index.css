@@ -445,9 +445,19 @@ body{
             }
             .competences{
                 .introSection{
+                    width: fit-content;
+                    justify-content: start;
+                    align-items: flex-start;
+                    h2{
+                       margin-left: 80px; 
+                    }
                     p{
                         text-align: center;
                         margin-top: 10px;
+                    }
+                    .accroche{
+                        margin-left: 30px;
+                        width: 450px;
                     }
                     .cards {
                         flex-wrap: nowrap;
@@ -457,7 +467,7 @@ body{
                         width: fit-content;
                         .card {
                             position: relative;
-                            transition: all 1s ease;  
+                            transition: all 1s ease; 
                         }
                         .card:active{
                             transform: scale(0.9);
