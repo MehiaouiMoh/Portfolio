@@ -464,7 +464,7 @@ body{
                         overflow: hidden;
                         user-select: none;
                         padding: 0 5vw;
-                        width: fit-content;
+                        width: 100svw;
                         .card {
                             position: relative;
                             transition: all 1s ease; 
