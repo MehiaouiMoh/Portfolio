@@ -192,7 +192,6 @@ body{
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    flex-wrap: wrap;
                     gap: 40px;
                     margin-top: 60px;
                     .card{
@@ -393,6 +392,13 @@ body{
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+            }
+            .competences{
+                .introSection{
+                    .cards {
+                        flex-wrap: wrap;
+                    }
+                }
             }
         }
     }
