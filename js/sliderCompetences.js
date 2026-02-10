@@ -1,49 +1,25 @@
 const track = document.getElementById("cards");
+const cardArr = track.getElementsByClassName("card");
 
-// initialize dataset defaults so slider starts at first card
-track.dataset.mouseDownAt = "0";
-track.dataset.prevPercentage = "0";
-track.dataset.percentage = "0";
+console.log(cardArr);
 
-const handleOnDown = (e) =>
-    track.dataset.mouseDownAt = e.clientX;
+//animation à appliquer uniquement pour les petits ecrans de 600px et moins
+//pour que les cartes restent fixes lors du scroll
+//et que l'utilisateur puisse les voir une par une
+//GSAP ScrollTrigger est utilisé pour cela
+//il faut rendre donc la carte en dessous invisible si elle est en dessous de la carte active
+//ceci est fait dans le CSS avec la classe .card:not(:first-child) { visibility: hidden; }
+if (window.innerWidth <= 600) {
+    gsap.registerPlugin(ScrollTrigger);
 
-const handleOnUp = ()=> {
-    track.dataset.mouseDownAt = "0";
-    track.dataset.prevPercentage = track.dataset.percentage;
+    gsap.utils.toArray(cardArr).forEach((card,i) =>{
+        ScrollTrigger.create({
+            trigger: card,
+            start: "top top",
+            pin: true,
+            pinSpacing: false,
+            //modifier la classe de la carte pour la passer en active
+            onEnter: () => card.classList.add("active"),
+        });
+    });
 }
-
-const handleOnMove = (e) =>{
-    if(track.dataset.mouseDownAt === "0") return;
-
-    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
-    const maxDelta = window.innerWidth;
-
-    // reduce sensitivity (0.7) so dragging is less jumpy
-    const sensitivity = 0.7;
-    const percentage = (mouseDelta / maxDelta) * (-100) * sensitivity;
-
-    const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
-
-    // compute minimum percentage based on content overflow so we don't over-scroll
-    const overflowPx = Math.max(track.scrollWidth - window.innerWidth, 0);
-    const minPercentage = overflowPx === 0 ? 0 : - (overflowPx / track.scrollWidth) * 100;
-
-    // clamp between minPercentage and 0
-    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), minPercentage);
-
-    track.dataset.percentage = nextPercentage;
-    track.animate({
-        transform: `translateX(${nextPercentage}%)`
-    },{duration:300, fill:"forwards"});
-
-
-}
-
-window.onmousedown = (e) => handleOnDown(e)
-window.ontouchstart = (e) => handleOnDown(e.touches[0])
-window.onmouseup = (e) => handleOnUp(e)
-window.ontouchend = (e) => handleOnUp(e.touches[0])
-
-window.onmousemove = (e) => handleOnMove(e)
-window.ontouchmove = (e) => handleOnMove(e.touches[0])
